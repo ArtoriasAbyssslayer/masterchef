@@ -16,6 +16,8 @@ class Player{
         int exhaustion;
         int popularity;
 
+        //TODO:verify variable types with xarh
+
     public:
         Player();
         Player(string n, string g, int a, string j);
@@ -30,12 +32,14 @@ class Player{
         int getPopularity() const {return popularity;}
 
         void setName(string s) {name = s;}
-        void setGender (string s) {gender = s;}
-        void setAge (int a) {age = a;}
-        void setJob (string s) {job = s;}
-        void setSkill (int s) {skill = s;}
-        void setExhaustion (int e) {exhaustion = e;}
-        void setPopularity (int p) {popularity = p;}
+        void setGender(string s) {gender = s;}
+        void setAge(int a) {age = a;}
+        void setJob(string s) {job = s;}
+        void setSkill(int s) {skill = s;}
+        void setExhaustion(int e) {exhaustion = e;}
+        void setPopularity(int p) {popularity = p;}
+
+        //TODO: add player methods
 };
 
 
