@@ -1,6 +1,8 @@
 #ifndef TEAM_H_INCLUDED
 #define TEAM_H_INCLUDED
 
-// FILL THIS FILE
+class Team{
+
+};
 
 #endif // TEAM_H_INCLUDED
