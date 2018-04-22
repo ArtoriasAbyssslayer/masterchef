@@ -5,10 +5,10 @@
 using namespace std;
 
 Player::Player(){
-    name = "Default";
-    gender = "default";
+    name = "No player";
+    gender = "-";
     age = 0;
-    job = "default";
+    job = "-";
     skill = rand()%80;
     wins=0;
     exhaustion = 0;
@@ -26,7 +26,6 @@ Player::Player(string n, string g, int a, string j){
     popularity = 50;
 }
 
-Player::~Player(){}
 
 void Player::sleep(){
     exhaustion = 0;
@@ -37,7 +36,7 @@ void Player::train(){
 void Player::eat(){
     cout<<"O paikths efage"<<endl;
 }
-void Player::doDay(){
+void Player::doDay(int* dayCounter){
     exhaustion += rand()%40+20;
     train();
     popularity+=rand()%20-10;

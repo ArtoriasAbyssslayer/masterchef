@@ -2,6 +2,7 @@
 #define TEAM_H_INCLUDED
 #include <string>
 #include "Player.h"
+#include <iostream>
 
 
 using namespace std;
@@ -11,16 +12,13 @@ class Team{
         int playerCount;
         string color;
         Player members[11];  //array with objects - class Player
-        string* ingredients;
+        string* ingredients; //not used in current form
         int wins;
-
-        //TODO: add array sizes, verify types with xarh
-
     public:
-        // Constructors / Destructors
+        // Constructors/Destructors
         Team();
         Team(string color, Player* members, string* ingredients);
-        ~Team();
+        ~Team(){};
         // getters
         int getPlayerCount() const {return playerCount;}
         int getWins() const {return wins;}
@@ -30,11 +28,10 @@ class Team{
         // setters
         void setColor(string c) {color = c;}
         void setIngredients(string* i) {ingredients = i;}
-        //void setMembers(Player m[]) {members = m;}
         void setWins(int w) {wins=w;}
         void setPlayerCount(int p) {playerCount=p;}
         //Methods
-        void status();
+        void status(); //prints team status
         void addPlayer(Player p);
         void printMembers();
 };

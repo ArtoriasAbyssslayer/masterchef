@@ -14,14 +14,14 @@ class Player{
         int wins;
         string job;
         int skill; //the ratio of skill "mapped" to integers
-        int exhaustion;//the ratio of exhaustion
+        int exhaustion;//the ratio of exhaustion "mapped" to integers
         int popularity;
 
     public:
-        // Constructors/Destructors
+        // Constructors/Destructor
         Player();
         Player(string n, string g, int a, string j);
-        ~Player();
+        ~Player(){};
         //getters
         string getName() const {return name;}
         string getGender() const {return gender;}
@@ -44,7 +44,7 @@ class Player{
         void sleep();
         void train();
         void eat();
-        void doDay();
+        void doDay(int *dayCounter);//TODESIDE WITH THODORI
         void status();
 };
 
