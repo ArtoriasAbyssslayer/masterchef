@@ -1,5 +1,6 @@
 #include "Player.h"
-#include <random>
+#include <stdlib.h>
+#include <iostream>
 
 using namespace std;
 
@@ -8,10 +9,8 @@ Player::Player(){
     gender = "default";
     age = 0;
     job = "default";
-    default_random_engine generator;
-    generator.seed(random_device()());
-    uniform_int_distribution<mt19937::result_type> dist80(0,80);
-    skill = dist80(generator);
+    skill = rand()%80;
+    wins=0;
     exhaustion = 0;
     popularity = 50;
 }
@@ -21,12 +20,34 @@ Player::Player(string n, string g, int a, string j){
     gender = g;
     age = a;
     job = j;
-    default_random_engine generator;
-    generator.seed(random_device()());
-    uniform_int_distribution<mt19937::result_type> dist80(0,80);
-    skill = dist80(generator);
+    wins = 0;
+    skill = rand()%80;
     exhaustion = 0;
     popularity = 50;
 }
 
 Player::~Player(){}
+
+void Player::sleep(){
+    exhaustion = 0;
+}
+void Player::train(){
+    skill+=5;
+}
+void Player::eat(){
+    cout<<"O paikths efage"<<endl;
+}
+void Player::doDay(){
+    exhaustion += rand()%40+20;
+    train();
+    popularity+=rand()%20-10;
+}
+void Player::status(){
+    cout<<name<<endl;
+    cout<<"Age: "<<age<<endl;
+    cout<<"Gender: "<<gender<<endl;
+    cout<<"Job: "<<job<<endl;
+    cout<<"Skill: "<<skill<<endl;
+    cout<<"Exhaustion: "<<exhaustion<<endl;
+    cout<<"Popularity: " <<popularity<<endl;
+}
