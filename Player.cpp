@@ -1,11 +1,12 @@
 #include "Player.h"
 #include <stdlib.h>
 #include <iostream>
+#include <assert.h>
 
 using namespace std;
 
 Player::Player(){
-    name = "No player";
+    name = "Player";
     gender = "-";
     age = 0;
     job = "-";
@@ -32,14 +33,17 @@ void Player::sleep(){
 }
 void Player::train(){
     skill+=5;
+    assert(0<=exhaustion<=100);//for debug
 }
 void Player::eat(){
     cout<<"O paikths efage"<<endl;
 }
-void Player::doDay(int* dayCounter){
+void Player::doDay(){  //parameter deleted as we don't implement something with doDay in current form of the project
     exhaustion += rand()%40+20;
+    assert(0<=exhaustion<=100);//for debug
     train();
     popularity+=rand()%20-10;
+    assert(0<=popularity<=100);
 }
 void Player::status(){
     cout<<name<<endl;

@@ -13,8 +13,8 @@ class Player{
         int age;
         int wins;
         string job;
-        int skill; //the ratio of skill "mapped" to integers
-        int exhaustion;//the ratio of exhaustion "mapped" to integers
+        int skill; //the percentage of skill
+        int exhaustion;//the percentage of exhaustion
         int popularity;
 
     public:
@@ -44,7 +44,7 @@ class Player{
         void sleep();
         void train();
         void eat();
-        void doDay(int *dayCounter);//TODESIDE WITH THODORI
+        void doDay();
         void status();
 };
 

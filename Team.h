@@ -2,18 +2,17 @@
 #define TEAM_H_INCLUDED
 #include <string>
 #include "Player.h"
-#include <iostream>
 
 
 using namespace std;
 class Team{
 
     private:
-        int playerCount;
         string color;
         Player members[11];  //array with objects - class Player
-        string* ingredients; //not used in current form
+        string* ingredients; //not used but still needed in the assignment
         int wins;
+        int playerCount;      // counter to access members array
     public:
         // Constructors/Destructors
         Team();
@@ -27,7 +26,8 @@ class Team{
         Player* getMembers() {return members;}
         // setters
         void setColor(string c) {color = c;}
-        void setIngredients(string* i) {ingredients = i;}
+        void setIngredients(string* i) {ingredients = i;}//not used but still needed in the assignment
+        //void setMembers(Player* m){members=m;} //npt used neither working in this form                       ~ TODEside whit Thodori
         void setWins(int w) {wins=w;}
         void setPlayerCount(int p) {playerCount=p;}
         //Methods

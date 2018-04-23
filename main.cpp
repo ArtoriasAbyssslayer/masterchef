@@ -4,7 +4,6 @@
 #include <cstdlib>
 #include <string>
 #include "Team.h"
-#include <assert.h>
 using namespace std;
 
 int main()
@@ -79,11 +78,11 @@ int main()
                 char team;
                 cout << "Specify player's team(r/b)" << endl;
                 cin >> team;
-                cout <<"Choose the player's name from the list"<<endl;
                 switch(team)
                 {
                     case 'b':
                     {
+                        cout <<"Choose the player's name from the list"<<endl;
                         blue.printMembers();
                         string player;
                         cin >> player;
@@ -106,6 +105,7 @@ int main()
                     //the same for red team case
                     case 'r':
                     {
+                        cout <<"Choose the player's name from the list"<<endl;
                         red.printMembers();
                         string player;
                         cin >> player;
